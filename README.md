@@ -18,3 +18,9 @@ Alternatively you can use the image that is automatically built and uploaded to 
 ```
 docker run --rm lcofre/payout
 ```
+
+You can also try the following tags:
+```
+docker run --rm lcofre/payout:alpine # For a smaller size image
+docker run --rm lcofre/payout:pypy # For an arguable faster execution
+```
