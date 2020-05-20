@@ -37,7 +37,7 @@ class AttendanceStatus:
             today = datetime.date.today()
             self.ages[attendance_entry["dob"]] = relativedelta(today, dob).years
 
-        for top_age, rate in self.basic_rates:
+        for top_age, rate in sorted(self.basic_rates.items()):
             if self.ages[attendance_entry["dob"]] < top_age:
                 return rate
 
