@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM pypy:3-slim
 
 WORKDIR /usr/src/payout
 
@@ -6,4 +6,4 @@ COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD [ "python", "./payout.py" ]
+CMD [ "pypy3", "./payout.py" ]
