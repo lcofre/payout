@@ -12,10 +12,10 @@ class CSVParser:
             self.input_file.close()
         return next_line
 
-    def all_as_list(self):
-        all_rows = []
+    def all_as_dict(self):
+        all_rows = {}
         current_line = self.next_line()
         while current_line:
-            all_rows.append(current_line)
+            all_rows[current_line['id']] = current_line
             current_line = self.next_line()
         return all_rows
